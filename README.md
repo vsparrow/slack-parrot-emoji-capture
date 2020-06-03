@@ -30,12 +30,9 @@ Your Slack system may have different parrots uploaded than the ones on my system
 
 * Open up Slack on a web browser
 * Bottom write of any channel click on emoji
-* ![showing emoji button on slack example](images/slackemoji01.png)
 * In the searchbar type in "parrot" without quotes
-* ![typing in searchbar example](images/slackemoji02.png)
 * Right click a parrot and "Inspect"
 * Press left on your keypad untill all paarots are highlighted
-* ![showing what the inspection view ](images/slackemoji03.png)
 * Right click the blue text and click Copy -> Copy Element
 * Open a new text file and paste the results 
 * Save this file as input.txt or whatever name you prefer
