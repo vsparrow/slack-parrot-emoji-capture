@@ -27,17 +27,24 @@ const onelineEmojis = array => {
 	return oneliner
 }
 
-// Read in file
-fs.readFile('./input.txt','utf8', (err,data) => {
-	if(err){return console.log(err)}
-	//extract all emojis names from htnl
-	const emojis = parser(data)  
-	//format output so it can be pasted on a slack message
-	const output = onelineEmojis(emojis) 
-	fs.writeFile('parrotParty.txt', output, err => {
-		if(err){console.log(err)}
-		else {console.log("outputted data to parrotParty.txt")}
+const readWrite = (inputFile,outputFile) => {
+	console.log("using input file",inputFile)
+	// Read in file
+	fs.readFile(inputFile,'utf8', (err,data) => {
+		if(err){return console.log(err)}
+		//extract all emojis names from htnl
+		const emojis = parser(data)  
+		//format output so it can be pasted on a slack message
+		const output = onelineEmojis(emojis) 
+		fs.writeFile(outputFile, output, err => {
+			if(err){console.log(err)}
+			else {console.log("outputted data to",outputFile)}
+		})
 	})
-})
+}
 
-
+const args = process.argv.slice(2)
+const inputFile = args[0] || 'input.txt'
+const outputFile = args[1] || 'parrotparty.txt'
+// console.log(inputFile," ",outputFile)
+readWrite(inputFile,outputFile)
