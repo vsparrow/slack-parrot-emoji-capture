@@ -29,10 +29,13 @@ git clone https://github.com/vsparrow/slack-parrot-emoji-capture.git
 Your Slack system may have different parrots uploaded than the ones on my system. You can always chhose to use the default input.txt file, but to get the most parrots out of your system follow the next steps:
 
 * Open up Slack on a web browser
-* Bottom write of any channel click on emoku
+* Bottom write of any channel click on emoji
+* ![showing emoji button on slack example](images/slackemoji01.png)
 * In the searchbar type in "parrot" without quotes
+* ![typing in searchbar example](images/slackemoji02.png)
 * Right click a parrot and "Inspect"
 * Press left on your keypad untill all paarots are highlighted
+* ![showing what the inspection view ](images/slackemoji03.png)
 * Right click the blue text and click Copy -> Copy Element
 * Open a new text file and paste the results 
 * Save this file as input.txt or whatever name you prefer
@@ -50,5 +53,6 @@ node get-emoji.js input.txt output.txt
 ## Using the output 
 
 Once you have the output, you can paste all your parrots into a slack message. Slack will automatically convert the parrot shortcuts to emojis
+* ![showing emojis in message on slack](images/slackemoji04.png)
 
 
